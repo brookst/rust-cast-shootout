@@ -1,0 +1,5 @@
+[package]
+
+name = "rust-cast-shootout"
+version = "0.0.1"
+authors = ["Tim Brooks <brooks@cern.ch>"]
