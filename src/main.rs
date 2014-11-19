@@ -65,6 +65,12 @@ fn test_if() {
 }
 
 #[bench]
+fn bench_if_values(b: &mut Bencher) {
+    let v = Vec::from_fn(256, |n| n as f32);
+    b.iter(|| v.iter().map(|n| attenuate_if(*n)));
+}
+
+#[bench]
 fn bench_if_zero(b: &mut Bencher) {
     b.iter(|| attenuate_if(0.0f32));
 }
@@ -90,6 +96,12 @@ fn test_minmax() {
     assert_eq!(attenuate_minmax ( 255.0f64 ) , 255u8);
     assert_eq!(attenuate_minmax ( 256.0f32 ) , 255u8);
     assert_eq!(attenuate_minmax ( - 1.0f64 ) , 0u8);
+}
+
+#[bench]
+fn bench_minmax_values(b: &mut Bencher) {
+    let v = Vec::from_fn(256, |n| n as f32);
+    b.iter(|| v.iter().map(|n| attenuate_minmax(*n)));
 }
 
 #[bench]
@@ -121,6 +133,12 @@ fn test_iter() {
 }
 
 #[bench]
+fn bench_iter_values(b: &mut Bencher) {
+    let v = Vec::from_fn(256, |n| n as f32);
+    b.iter(|| v.iter().map(|n| attenuate_iter(*n)));
+}
+
+#[bench]
 fn bench_iter_zero(b: &mut Bencher) {
     b.iter(|| attenuate_iter(0.0f32));
 }
@@ -146,6 +164,12 @@ fn test_generic() {
     assert_eq!(attenuate_generic ( 255.0f64 ) , 255u8);
     assert_eq!(attenuate_generic ( 256.0f32 ) , 255u8);
     assert_eq!(attenuate_generic ( - 1.0f64 ) , 0u8);
+}
+
+#[bench]
+fn bench_generic_values(b: &mut Bencher) {
+    let v = Vec::from_fn(256, |n| n as f32);
+    b.iter(|| v.iter().map(|n| attenuate_generic(*n)));
 }
 
 #[bench]
