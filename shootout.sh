@@ -25,7 +25,7 @@ The current version gives the following timings::
 
 END
 
-cmd="cargo bench"
+cmd="cargo bench bench"
 echo "> ${cmd}" | tee shootout.log
 ${cmd} | grep --line-buffered -v '\.\.\.\ ignored' | tee -a shootout.log
 sed -e's/^/    /' shootout.log >> ${readme}
