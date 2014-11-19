@@ -15,6 +15,9 @@ The original implementation was written by me for use in \`Rust-Trace\`_. The mi
 .. _arthurprs: http://www.reddit.com/user/arthurprs
 .. _thiez: http://www.reddit.com/user/thiez
 
+.. image:: https://travis-ci.org/brookst/rust-cast-shootout.svg?branch=master
+    :target: https://travis-ci.org/brookst/rust-cast-shootout
+
 Benchmarks
 ----------
 
