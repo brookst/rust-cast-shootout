@@ -20,7 +20,6 @@ Benchmarks
 The current version gives the following timings::
 
     > cargo bench bench
-       Compiling rust-cast-shootout v0.0.2 (file:///home/brooks/dev/rust-cast-shootout)
          Running target/release/rust-cast-shootout-9f7b1b64b13c3426
     
     running 20 tests
@@ -35,12 +34,12 @@ The current version gives the following timings::
     test bench_if_values      ... bench:         0 ns/iter (+/- 0)
     test bench_if_zero        ... bench:         0 ns/iter (+/- 0)
     test bench_iter_max       ... bench:         6 ns/iter (+/- 0)
-    test bench_iter_over      ... bench:         6 ns/iter (+/- 1)
-    test bench_iter_under     ... bench:         6 ns/iter (+/- 0)
+    test bench_iter_over      ... bench:         6 ns/iter (+/- 0)
+    test bench_iter_under     ... bench:         6 ns/iter (+/- 1)
     test bench_iter_values    ... bench:         0 ns/iter (+/- 0)
     test bench_iter_zero      ... bench:         6 ns/iter (+/- 1)
-    test bench_minmax_max     ... bench:         6 ns/iter (+/- 0)
-    test bench_minmax_over    ... bench:         7 ns/iter (+/- 1)
+    test bench_minmax_max     ... bench:         6 ns/iter (+/- 1)
+    test bench_minmax_over    ... bench:         6 ns/iter (+/- 1)
     test bench_minmax_under   ... bench:         7 ns/iter (+/- 1)
     test bench_minmax_values  ... bench:         0 ns/iter (+/- 0)
     test bench_minmax_zero    ... bench:         6 ns/iter (+/- 0)

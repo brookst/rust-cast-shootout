@@ -27,7 +27,7 @@ END
 
 cmd="cargo bench bench"
 echo "> ${cmd}" | tee shootout.log
-${cmd} | grep --line-buffered -v '\.\.\.\ ignored' | tee -a shootout.log
+${cmd} 2>/dev/null | grep --line-buffered -v '\.\.\.\ ignored\|Compiling' | tee -a shootout.log
 sed -e's/^/    /' shootout.log >> ${readme}
 
 cat >> ${readme} <<END
