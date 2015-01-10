@@ -20,29 +20,30 @@ Benchmarks
 The current version gives the following timings::
 
     > cargo bench bench
-         Running target/release/rust-cast-shootout-132f7401037e4cf7
+       Compiling rust-cast-shootout v0.0.2 (file:///home/brooks/dev/rust-cast-shootout)
+         Running target/release/rust-cast-shootout-9f7b1b64b13c3426
     
     running 20 tests
-    test bench_generic_max    ... bench:         2 ns/iter (+/- 0)
-    test bench_generic_over   ... bench:         2 ns/iter (+/- 0)
-    test bench_generic_under  ... bench:         2 ns/iter (+/- 0)
-    test bench_generic_values ... bench:         2 ns/iter (+/- 0)
-    test bench_generic_zero   ... bench:         2 ns/iter (+/- 0)
-    test bench_if_max         ... bench:         2 ns/iter (+/- 0)
-    test bench_if_over        ... bench:         2 ns/iter (+/- 0)
-    test bench_if_under       ... bench:         2 ns/iter (+/- 0)
-    test bench_if_values      ... bench:         2 ns/iter (+/- 0)
-    test bench_if_zero        ... bench:         2 ns/iter (+/- 0)
-    test bench_iter_max       ... bench:         9 ns/iter (+/- 0)
-    test bench_iter_over      ... bench:         9 ns/iter (+/- 0)
-    test bench_iter_under     ... bench:         9 ns/iter (+/- 0)
-    test bench_iter_values    ... bench:         2 ns/iter (+/- 0)
-    test bench_iter_zero      ... bench:         9 ns/iter (+/- 0)
-    test bench_minmax_max     ... bench:         8 ns/iter (+/- 0)
-    test bench_minmax_over    ... bench:         8 ns/iter (+/- 0)
-    test bench_minmax_under   ... bench:         8 ns/iter (+/- 0)
-    test bench_minmax_values  ... bench:         2 ns/iter (+/- 0)
-    test bench_minmax_zero    ... bench:         9 ns/iter (+/- 2)
+    test bench_generic_max    ... bench:         0 ns/iter (+/- 0)
+    test bench_generic_over   ... bench:         0 ns/iter (+/- 0)
+    test bench_generic_under  ... bench:         0 ns/iter (+/- 0)
+    test bench_generic_values ... bench:         0 ns/iter (+/- 0)
+    test bench_generic_zero   ... bench:         0 ns/iter (+/- 0)
+    test bench_if_max         ... bench:         0 ns/iter (+/- 0)
+    test bench_if_over        ... bench:         0 ns/iter (+/- 0)
+    test bench_if_under       ... bench:         0 ns/iter (+/- 0)
+    test bench_if_values      ... bench:         0 ns/iter (+/- 0)
+    test bench_if_zero        ... bench:         0 ns/iter (+/- 0)
+    test bench_iter_max       ... bench:         6 ns/iter (+/- 0)
+    test bench_iter_over      ... bench:         6 ns/iter (+/- 1)
+    test bench_iter_under     ... bench:         6 ns/iter (+/- 0)
+    test bench_iter_values    ... bench:         0 ns/iter (+/- 0)
+    test bench_iter_zero      ... bench:         6 ns/iter (+/- 1)
+    test bench_minmax_max     ... bench:         6 ns/iter (+/- 0)
+    test bench_minmax_over    ... bench:         7 ns/iter (+/- 1)
+    test bench_minmax_under   ... bench:         7 ns/iter (+/- 1)
+    test bench_minmax_values  ... bench:         0 ns/iter (+/- 0)
+    test bench_minmax_zero    ... bench:         6 ns/iter (+/- 0)
     
     test result: ok. 0 passed; 0 failed; 0 ignored; 20 measured
     
