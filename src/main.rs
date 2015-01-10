@@ -6,7 +6,6 @@ extern crate test;
 use test::Bencher;
 
 use std::num::{Float,FromPrimitive,ToPrimitive,NumCast};
-
 #[allow(dead_code)]
 /// Original function by Morphit (http://www.reddit.com/user/Morphit)
 fn attenuate_if<T: Float + FromPrimitive>(channel: T) -> u8 {
@@ -67,7 +66,7 @@ fn test_if() {
 
 #[bench]
 fn bench_if_values(b: &mut Bencher) {
-    let v = Vec::from_fn(256, |n| n as f32);
+    let v: Vec<f32> = (0..256).map(|n| n as f32).collect();
     b.iter(|| v.iter().map(|n| attenuate_if(*n)));
 }
 
@@ -101,7 +100,7 @@ fn test_minmax() {
 
 #[bench]
 fn bench_minmax_values(b: &mut Bencher) {
-    let v = Vec::from_fn(256, |n| n as f32);
+    let v: Vec<f32> = (0..256).map(|n| n as f32).collect();
     b.iter(|| v.iter().map(|n| attenuate_minmax(*n)));
 }
 
@@ -135,7 +134,7 @@ fn test_iter() {
 
 #[bench]
 fn bench_iter_values(b: &mut Bencher) {
-    let v = Vec::from_fn(256, |n| n as f32);
+    let v: Vec<f32> = (0..256).map(|n| n as f32).collect();
     b.iter(|| v.iter().map(|n| attenuate_iter(*n)));
 }
 
@@ -169,7 +168,7 @@ fn test_generic() {
 
 #[bench]
 fn bench_generic_values(b: &mut Bencher) {
-    let v = Vec::from_fn(256, |n| n as f32);
+    let v: Vec<f32> = (0..256).map(|n| n as f32).collect();
     b.iter(|| v.iter().map(|n| attenuate_generic(*n)));
 }
 
