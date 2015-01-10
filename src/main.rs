@@ -4,7 +4,8 @@ extern crate test;
 
 #[cfg(test)]
 use test::Bencher;
-use std::num::{Float,FloatMath,NumCast};
+
+use std::num::{Float,FromPrimitive,ToPrimitive,NumCast};
 
 #[allow(dead_code)]
 /// Original function by Morphit (http://www.reddit.com/user/Morphit)
@@ -20,13 +21,13 @@ fn attenuate_if<T: Float + FromPrimitive>(channel: T) -> u8 {
 
 #[allow(dead_code)]
 /// Min/Max version by arthurprs (http://www.reddit.com/user/arthurprs)
-fn attenuate_minmax<T: FloatMath + FromPrimitive>(channel: T) -> u8 {
+fn attenuate_minmax<T: Float + FromPrimitive>(channel: T) -> u8 {
     channel.min(FromPrimitive::from_f64(255.0).unwrap()).max(FromPrimitive::from_f64(0.0).unwrap()).to_u8().unwrap()
 }
 
 #[allow(dead_code)]
 /// Iterator version by thiez (http://www.reddit.com/user/thiez)
-fn attenuate_iter<T: FloatMath>(channel: T) -> u8 {
+fn attenuate_iter<T: Float>(channel: T) -> u8 {
     NumCast::from(255u8)
         .into_iter()
         .zip(NumCast::from(0u8).into_iter())
